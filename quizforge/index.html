@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizForge</title>
+  <meta name="description" content="A zero-cost, no-backend quiz web app." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#0d9488" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#/" aria-label="QuizForge home">
+      <span class="brand-mark" aria-hidden="true">QF</span>
+    </a>
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#/" data-nav="library">Library</a>
+      </nav>
+      <button id="about-btn" class="btn about-btn" type="button">
+        <svg class="about-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 7.5h.01" />
+        </svg>
+        How this works?
+      </button>
+      <button id="report-bugs-btn" class="btn report-btn" type="button">
+        <svg class="report-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 6a4 4 0 0 1 8 0" /><rect x="6" y="8" width="12" height="10" rx="6" />
+          <path d="M3 11h3M18 11h3M3 16h3M18 16h3M12 8v10" />
+        </svg>
+        Report Bugs
+      </button>
+    </div>
+  </header>
+
+  <main id="app" class="app" aria-live="polite">
+    <!-- Views render here -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <span class="footer-mark" aria-hidden="true">QuizForge</span>
+        <p>A free, community-built quiz app. Build, take and share quizzes right in your browser. No account, no cost.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#/">Library</a></li>
+          <li><a href="#/editor/new">New quiz</a></li>
+          <li><a href="#/import">Import a quiz</a></li>
+          <li><a href="#/import/classmarker">ClassMarker guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Project</h3>
+        <ul>
+          <li><button class="footer-link" id="footer-about" type="button">How this works</button></li>
+          <li><button class="footer-link" id="footer-report" type="button">Report a bug</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:amer_jamakovic@hotmail.com">amer_jamakovic@hotmail.com</a></li>
+          <li>Discord: Ammy844#4665</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Quizzes are saved in this browser; export often to keep backups. Study hard and good luck.</p>
+      <div class="footer-bottom-right">
+        <button class="pink-btn" id="theme-toggle" type="button">Make it PINKKK!!</button>
+        <span>&copy; 2026 QuizForge, a student project</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- A live region for transient status messages (toasts) -->
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
